@@ -1,4 +1,5 @@
 export const brandName = 'Basic IT'
+export const logoPath = '/basic-it-logo.jpeg'
 
 export const officialDomain = 'basicit.com.bd'
 export const officialWebsiteUrl = 'https://basicit.com.bd'
@@ -7,28 +8,42 @@ export const phoneNumber = '01743742098'
 export const whatsappUrl = 'https://wa.me/8801743742098?text=Hello%20Basic%20IT%2C%20I%20want%20to%20discuss%20a%20project.'
 export const locationText = 'Based in Dhaka, Bangladesh'
 
+export const facebookPageUrl = 'https://www.facebook.com/basicitsoft'
+
 export const socialLinks = [
-  { label: 'Facebook', href: 'https://www.facebook.com/basicitsoft' },
+  { label: 'Facebook', href: facebookPageUrl },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/company/basicitbd' },
 ]
 
+export const contactAltLinks = [
+  { label: 'WhatsApp', href: whatsappUrl, external: true },
+  { label: 'Facebook', href: facebookPageUrl, external: true },
+  { label: 'Email', href: `mailto:${contactEmail}`, external: false },
+]
+
 export const navLinks = [
-  { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
-  { label: 'Work & Experience', href: '#worked-with' },
+  { label: 'Work', href: '#worked-with' },
   { label: 'Products', href: '#products' },
+  { label: 'Clients', href: '#businesses-supported' },
   { label: 'Contact', href: '#contact' },
 ]
+
+export const navCta = {
+  label: 'Contact Us',
+  href: '#contact',
+  external: false,
+}
 
 export const footerLinks = [
-  { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
-  { label: 'Work & Experience', href: '#worked-with' },
+  { label: 'Work', href: '#worked-with' },
   { label: 'Products', href: '#products' },
+  { label: 'Clients', href: '#businesses-supported' },
   { label: 'Contact', href: '#contact' },
 ]
 
-export const footerCopyright = '© Basic IT'
+export const footerCopyright = '© Basic IT 2019–2026'
 
 export const footerDescription =
   'Basic IT is a technology and digital business solutions brand established in 2019, helping businesses, educators, and service providers build websites, digital presence, software systems, and product-based platforms.'
@@ -42,14 +57,22 @@ export const footerLegalLinks = [
 ]
 
 export const hero = {
-  eyebrow: 'ESTABLISHED 2019 · DHAKA, BANGLADESH · DIGITAL SOLUTIONS COMPANY',
-  title: 'Build your digital presence with Basic IT',
+  eyebrow: 'We solve your complex problems.',
+  titleBefore: 'We build',
+  //titleAfter: 'with Basic IT',
+  typewriterPhrases: [
+    'Business Websites',
+    'e-commerce',
+    'Education Platforms',
+    'Software Systems',
+    'digital business setup',
+  ],
   lead:
-    'Websites, e-commerce, educational platforms, software systems, and digital business setup for businesses, educators, and service providers.',
+    'We manage your technology so you can focus on growing your business. No hidden fees, no tech jargon—just reliable support when you need it most.',
   trustLine:
-    'Established in 2019. Publicly launched in 2020. Supporting local businesses with practical digital solutions.',
+    'Established in 2019. Supporting businesses with practical digital solutions.',
   actions: [
-    { label: 'Chat on WhatsApp', href: whatsappUrl, variant: 'primary', external: true },
+    { label: 'Contact Us', href: '#contact', variant: 'primary' },
     { label: 'Explore Services', href: '#services', variant: 'secondary' },
   ],
   panelTitle: 'CORE CAPABILITIES',
@@ -62,7 +85,7 @@ export const hero = {
 }
 
 export const trustNumbers = [
-  { value: '2019', countTo: 2019, label: 'Established' },
+  { value: '2019', label: 'Established', animate: false },
   { value: '5+ Years', countTo: 5, suffix: '+ Years', label: 'Digital service experience' },
   { value: '20+', countTo: 20, suffix: '+', label: 'Businesses supported' },
   { value: '2 Products', countTo: 2, suffix: ' Products', label: 'In development' },
@@ -149,37 +172,37 @@ export const servicesSection = {
 
 export const services = [
   {
-    icon: '🌐',
+    icon: 'globe',
     title: 'Website Development',
     description:
       'Business websites, landing pages, service websites, portfolio sites, and custom website design for clear online presence.',
   },
   {
-    icon: '🛒',
+    icon: 'cart',
     title: 'E-commerce Website Solutions',
     description:
       'Product-based website structure, online store setup direction, product pages, order-focused layouts, and business-ready website planning.',
   },
   {
-    icon: '📚',
+    icon: 'book',
     title: 'Educational Platform Development',
     description:
       'Teacher websites, course-selling platforms, coaching websites, academic service pages, and education-focused website systems.',
   },
   {
-    icon: '⚙️',
+    icon: 'settings',
     title: 'Software & Workflow Systems',
     description:
       'Custom tools, dashboards, workflow systems, internal management tools, and practical software planning for business operations.',
   },
   {
-    icon: '📍',
+    icon: 'pin',
     title: 'Digital Business Setup',
     description:
       'Facebook page setup, Google location support, branding basics, logo and cover design, business profile setup, and digital footprint creation.',
   },
   {
-    icon: '📣',
+    icon: 'megaphone',
     title: 'Digital Marketing Support',
     description:
       'Facebook boost direction, SEO basics, content planning, campaign direction, online visibility support, and digital growth guidance.',
@@ -204,37 +227,56 @@ export const helpCards = [
 export const workedWithSection = {
   title: 'Featured Work & Practical Experience',
   description:
-    'A focused view of the real work areas behind Basic IT: websites, online presence setup, business pages, educational platforms, and product planning.',
+    'Real examples and service areas behind Basic IT — from live platforms to business websites, digital setup, and product planning.',
+  stats: [
+    { value: '3', label: 'Core focus areas' },
+    { value: '10+', label: 'Experience areas' },
+    { value: '20+', label: 'Businesses supported' },
+  ],
 }
 
 export const featuredWork = [
   {
     icon: '01',
-    title: 'faysalimran.com',
+    type: 'platform',
+    title: 'Education Platform Example',
     label: 'Platform example',
     description:
-      'A live platform example showing organized service presentation, learning content direction, contact flow, and education-focused website structure.',
-    meta: 'Website structure · Content flow · Lead capture',
-    scope: ['Website', 'Education', 'Content'],
-    href: 'https://www.faysalimran.com/',
+      'Education-focused platform work with clear service presentation, learning content direction, structured pages, and a practical contact flow.',
+    highlights: [
+      'Organized service and content sections',
+      'Education-oriented site structure',
+      'Lead capture and contact flow',
+    ],
+    chips: ['Website', 'Education', 'Content', 'Platform planning'],
   },
   {
     icon: '02',
+    type: 'business',
     title: 'Business & E-commerce Websites',
-    label: 'Business web experience',
+    label: 'Business web',
     description:
-      'Experience with business-ready website planning, product presentation, service pages, order-focused layouts, and online store direction.',
-    meta: 'Product pages · Service pages · Conversion layout',
-    scope: ['Business site', 'E-commerce', 'Planning'],
+      'Business-ready website planning with product pages, service pages, order-focused layouts, and conversion-minded structure.',
+    highlights: [
+      'Product and service page planning',
+      'Store-ready layout direction',
+      'Clear customer journey on each page',
+    ],
+    chips: ['Business site', 'E-commerce', 'Product pages', 'Conversion layout'],
   },
   {
     icon: '03',
+    type: 'setup',
     title: 'Digital Business Setup',
-    label: 'Presence setup support',
+    label: 'Presence setup',
     description:
-      'Support for businesses starting from scratch: Facebook page setup, Google location/profile support, branding basics, content direction, and visibility planning.',
-    meta: 'Facebook · Google profile · Branding basics',
-    scope: ['Facebook', 'Google profile', 'Branding'],
+      'Support for businesses starting online: Facebook pages, Google Business Profile, branding basics, and visibility planning.',
+    highlights: [
+      'Facebook page setup and direction',
+      'Google location and profile support',
+      'Branding, content, and visibility basics',
+    ],
+    chips: ['Facebook', 'Google profile', 'Branding', 'Visibility'],
   },
 ]
 
@@ -260,54 +302,47 @@ export const supportedSection = {
 }
 
 export const supportedPlaceholders = [
-  { name: 'Retail Businesses', type: 'Page, profile, and visibility support' },
-  { name: 'Education Services', type: 'Academic page and content direction' },
-  { name: 'Coaching Centers', type: 'Digital presence and workflow support' },
-  { name: 'Service Providers', type: 'Online profile and contact setup' },
-  { name: 'Course Sellers', type: 'Educational website direction' },
-  { name: 'Online Stores', type: 'E-commerce planning and layout' },
-  { name: 'Google Business Profiles', type: 'Location and profile support' },
-  { name: 'Facebook Pages', type: 'Business page setup and boost direction' },
+  { name: 'Retail Businesses', type: 'Page, profile, and visibility support', initials: 'RB', tone: 'teal' },
+  { name: 'Education Services', type: 'Academic page and content direction', initials: 'ES', tone: 'blue' },
+  { name: 'Coaching Centers', type: 'Digital presence and workflow support', initials: 'CC', tone: 'violet' },
+  { name: 'Service Providers', type: 'Online profile and contact setup', initials: 'SP', tone: 'amber' },
+  { name: 'Course Sellers', type: 'Educational website direction', initials: 'CS', tone: 'rose' },
+  { name: 'Online Stores', type: 'E-commerce planning and layout', initials: 'OS', tone: 'cyan' },
+  { name: 'Google Business Profiles', type: 'Location and profile support', initials: 'GB', tone: 'green' },
+  { name: 'Facebook Pages', type: 'Business page setup and boost direction', initials: 'FB', tone: 'indigo' },
 ]
 
 export const productsSection = {
-  title: 'Products / SaaS Products',
+  title: 'SaaS Products by Basic IT',
   description:
-    'Basic IT is also developing product directions in education, fitness workflow, and teacher-focused platforms — each shown with a clear current status.',
+    'Basic IT is building software products alongside client services — focused on education and fitness workflows, with clear status for each product.',
 }
 
-export const products = [
+export const saasProducts = [
   {
+    id: 'sts',
     badge: 'In Development',
-    name: 'STS — Study Tracking System',
+    name: 'STS',
+    subtitle: 'Study Tracking System',
     description:
-      'An education SaaS product by Basic IT designed for students, teachers, guardians, and coaching centers to manage study tasks, attendance, feedback, schedules, progress, and communication.',
+      'Education SaaS for students, teachers, guardians, and coaching centers — study tasks, attendance, feedback, schedules, progress, and communication.',
     features: [
-      'For students, teachers, guardians, and coaching centers',
-      'Study tasks, attendance, feedback, schedules, and progress',
-      'Designed around real coaching and academic workflows',
+      'Coaching and academic workflows',
+      'Tasks, attendance, and progress',
+      'Guardian and teacher communication',
     ],
   },
   {
-    badge: 'In Development / Joint Venture Exploration',
+    id: 'fitx',
+    badge: 'In Development',
     name: 'FitXtracker',
+    subtitle: 'Fitness workflow platform',
     description:
-      'A fitness workflow product for gym trainers and trainees. The frontend concept is prepared, and future development depends on market survey and product validation.',
+      'Fitness workflow software for gym trainers and trainees — routines, workout tasks, attendance, and progress tracking.',
     features: [
-      'Routine, workout task, and attendance management',
-      'Progress tracking for trainers and trainees',
-      'Future roadmap depends on validation and agreement',
-    ],
-  },
-  {
-    badge: 'Available Service / Product Direction',
-    name: 'Educational Platform for Teachers',
-    description:
-      'Website and platform solution for personal teachers, course sellers, and educators, similar to faysalimran.com.',
-    features: [
-      'Personal teacher or educator website',
-      'Course or service presentation pages',
-      'Academic content, contact, and online presence support',
+      'Trainer and trainee workflows',
+      'Routines and workout tasks',
+      'Progress and attendance tracking',
     ],
   },
 ]
@@ -316,56 +351,70 @@ export const whySection = {
   title: 'Why Choose Basic IT',
   description:
     'A practical, honest approach for customers who need clear digital direction before investing in a website, software, or product idea.',
+  closing:
+    'Tell us your goal — we will recommend the right service, explain the scope honestly, and help you move forward step by step.',
 }
 
 export const whyPoints = [
   {
+    icon: 'established',
     title: 'Established since 2019',
-    body: 'Basic IT has been working with technology, training experience, and digital business support since 2019.',
+    body: 'Basic IT has been working with technology, training experience, and digital business support since 2019 and publicly launched in 2020.',
   },
   {
+    icon: 'digital',
     title: 'Real digital business experience',
     body: 'We understand Facebook page setup, Google location support, branding basics, websites, content planning, and digital marketing needs.',
   },
   {
+    icon: 'education',
     title: 'Education-sector understanding',
     body: 'Basic IT is connected with education work, coaching experience, students, teachers, guardians, and academic service workflows.',
   },
   {
+    icon: 'planning',
     title: 'Practical technology planning',
-    body: 'We focus on what the client actually needs now, and what can be improved later.',
+    body: 'We focus on what you need now and what can be improved later — without over-selling unnecessary features.',
   },
   {
+    icon: 'honest',
     title: 'Honest project scope',
-    body: 'We explain what is included, what is not included, and what should be planned step by step.',
+    body: 'We explain what is included, what is not included, and what should be planned step by step before work begins.',
   },
   {
+    icon: 'product',
     title: 'Service + product mindset',
-    body: 'Basic IT works on both client services and its own product ideas, giving us a practical understanding of real digital products.',
+    body: 'Basic IT works on client services and its own products (STS, FitXtracker), giving practical insight into real digital products.',
   },
 ]
 
-export const ctaSection = {
-  title: 'Not sure what digital solution you need?',
+export const guidanceSection = {
+  title: 'Not sure what you need?',
   description:
-    'Tell Basic IT about your business, course, coaching center, website, software idea, or digital setup need. We will help you understand the right next step before starting the project.',
-  actions: [
-    { label: 'Request a Consultation', href: '#contact', variant: 'primary' },
-    { label: 'Chat on WhatsApp', href: whatsappUrl, variant: 'secondary', external: true },
-  ],
+    'Tell us your goal — we will recommend the right service before you commit to a project.',
+  goalsLabel: 'Start with your goal',
+  actions: [{ label: 'Discuss your goal', href: '#contact', variant: 'primary' }],
 }
 
 export const contactSection = {
   title: 'Contact Basic IT',
-  lead:
-    'Tell us what you want to build. WhatsApp is the fastest way to discuss your website, software, digital setup, or product idea.',
+  lead: 'Send your project details below. Choose how you want us to reply.',
   email: contactEmail,
   phone: phoneNumber,
   whatsappUrl,
+  facebookPageUrl,
   location: locationText,
   domainLabel: officialDomain,
   formSuccess:
-    'Thank you. The contact form is frontend-only for now. Please send your message directly by WhatsApp or email so Basic IT can reply.',
+    'Thank you. Your message is ready — we will follow up through your selected contact method.',
+  formSuccessPage:
+    'Thank you for your message. Basic IT will review your inquiry and reply through this website contact flow or your provided contact details.',
+  preferredContactOptions: [
+    { value: 'form', label: 'Reply on this page' },
+    { value: 'whatsapp', label: 'WhatsApp' },
+    { value: 'facebook', label: 'Facebook' },
+    { value: 'email', label: 'Email' },
+  ],
   serviceTypes: [
     'Website',
     'E-commerce Website',

@@ -4,47 +4,40 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Hero from './sections/Hero'
 import TrustNumbers from './sections/TrustNumbers'
-import About from './sections/About'
-import Ecosystem from './sections/Ecosystem'
-import Journey from './sections/Journey'
 import Services from './sections/Services'
-import HowHelp from './sections/HowHelp'
+import Guidance from './sections/Guidance'
 import WorkedWith from './sections/WorkedWith'
 import SupportedBusinesses from './sections/SupportedBusinesses'
 import Products from './sections/Products'
 import WhyChoose from './sections/WhyChoose'
-import CTA from './sections/CTA'
 import Contact from './sections/Contact'
+
+const SCROLL_TARGETS = [
+  '.hero-grid > *',
+  '.trust-card',
+  '.section .section-head',
+  '.card',
+  '.guidance-panel',
+  '.worked-header-row',
+  '.worked-stat',
+  '.featured-work-card',
+  '.support-marquee-panel',
+  '.support-slide',
+  '.worked-list-panel',
+  '.worked-grid li',
+  '.saas-product-card',
+  '.why-card',
+  '.contact-form',
+  '.footer-main > *',
+].join(', ')
 
 function App() {
   useEffect(() => {
-    const elements = Array.from(
-      document.querySelectorAll(
-        [
-          '.hero-grid > *',
-          '.trust-card',
-          '.section .section-head',
-          '.card',
-          '.journey-milestone',
-          '.help-card',
-          '.featured-work-card',
-          '.worked-proof-badge',
-          '.worked-list-panel',
-          '.supported-proof-card',
-          '.supported-logo-placeholder',
-          '.product-card',
-          '.why-item',
-          '.cta-box',
-          '.contact-form',
-          '.contact-card',
-          '.footer-main > *',
-        ].join(', ')
-      )
-    )
+    const elements = Array.from(document.querySelectorAll(SCROLL_TARGETS))
 
     elements.forEach((element, index) => {
       element.classList.add('animate-on-scroll')
-      element.style.setProperty('--reveal-delay', `${Math.min((index % 5) * 60, 240)}ms`)
+      element.style.setProperty('--reveal-delay', `${Math.min((index % 6) * 70, 350)}ms`)
     })
 
     if (!('IntersectionObserver' in window)) {
@@ -61,7 +54,7 @@ function App() {
           }
         })
       },
-      { threshold: 0.12, rootMargin: '0px 0px -48px 0px' }
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
     )
 
     elements.forEach((element) => observer.observe(element))
@@ -71,20 +64,19 @@ function App() {
 
   return (
     <div className="site">
+      <a className="skip-link" href="#main-content">
+        Skip to main content
+      </a>
       <Navbar />
-      <main>
+      <main id="main-content">
         <Hero />
         <TrustNumbers />
-        <About />
-        <Ecosystem />
-        <Journey />
         <Services />
-        <HowHelp />
+        <Guidance />
         <WorkedWith />
         <SupportedBusinesses />
         <Products />
         <WhyChoose />
-        <CTA />
         <Contact />
       </main>
       <Footer />

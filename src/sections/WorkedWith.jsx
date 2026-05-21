@@ -10,9 +10,13 @@ export default function WorkedWith() {
             title={workedWithSection.title}
             description={workedWithSection.description}
           />
-          <div className="worked-proof-badge" aria-label="Basic IT work proof summary">
-            <span>Practical proof</span>
-            <strong>Website · Business setup · Product direction</strong>
+          <div className="worked-stats" aria-label="Work summary">
+            {workedWithSection.stats.map((stat) => (
+              <div key={stat.label} className="worked-stat">
+                <strong>{stat.value}</strong>
+                <span>{stat.label}</span>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -21,39 +25,41 @@ export default function WorkedWith() {
             <article key={item.title} className="featured-work-card">
               <div className="featured-work-card-head">
                 <span className="featured-work-index">{item.icon}</span>
-                <span className="featured-work-label">{item.label}</span>
+                <span className={`featured-work-label featured-work-label--${item.type}`}>
+                  {item.label}
+                </span>
               </div>
 
-              <div className="featured-work-body">
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
 
-              {item.scope ? (
-                <div className="featured-work-tags" aria-label={`${item.title} scope`}>
-                  {item.scope.map((scopeItem) => (
-                    <span key={scopeItem}>{scopeItem}</span>
+              {item.highlights ? (
+                <ul className="featured-work-highlights">
+                  {item.highlights.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              ) : null}
+
+              {item.chips ? (
+                <div className="featured-work-chips" aria-label={`${item.title} areas`}>
+                  {item.chips.map((chip) => (
+                    <span key={chip}>{chip}</span>
                   ))}
                 </div>
               ) : null}
-
-              <div className="featured-work-footer">
-                {item.meta ? <small>{item.meta}</small> : null}
-                {item.href ? (
-                  <a href={item.href} target="_blank" rel="noreferrer">
-                    View live example
-                  </a>
-                ) : null}
-              </div>
             </article>
           ))}
         </div>
 
         <div className="worked-list-panel">
           <div className="worked-list-copy">
-            <span>Experience areas</span>
+            <span className="worked-list-eyebrow">Experience areas</span>
             <h3 className="worked-list-title">What Basic IT has worked with</h3>
-            <p>Short, honest proof areas from service work, online setup, website planning, and product direction.</p>
+            <p>
+              Honest proof areas from website delivery, online business setup, education platforms,
+              and SaaS product planning.
+            </p>
           </div>
           <ul className="worked-grid">
             {workedWithItems.map((item) => (

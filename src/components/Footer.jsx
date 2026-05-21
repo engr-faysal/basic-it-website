@@ -1,3 +1,4 @@
+import BrandLogo from './BrandLogo'
 import {
   brandName,
   contactEmail,
@@ -6,12 +7,9 @@ import {
   footerLegalLinks,
   footerLinks,
   footerServicesSummary,
-  officialDomain,
-  officialWebsiteUrl,
+  locationText,
   phoneNumber,
   socialLinks,
-  locationText,
-  whatsappUrl,
 } from '../data/siteData'
 
 export default function Footer() {
@@ -20,44 +18,18 @@ export default function Footer() {
       <div className="container footer-inner">
         <div className="footer-main">
           <div className="footer-brand">
-            <a href="#home" className="footer-logo-link" aria-label="Basic IT home">
-              <img src="/basic-it-logo.jpeg" alt="" className="footer-logo" />
-              <span>{brandName}</span>
+            <a href="#home" className="footer-logo-link" aria-label={`${brandName} home`}>
+              <BrandLogo showName />
             </a>
             <p className="footer-description">{footerDescription}</p>
+            <p className="footer-tagline">Established 2019</p>
           </div>
 
-          <div className="footer-column">
+          <div className="footer-column footer-contact">
             <p className="footer-column-title">Contact</p>
-            <div className="footer-contact-list">
-              <a href={officialWebsiteUrl} target="_blank" rel="noreferrer">
-                {officialDomain}
-              </a>
-              <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
-              <a href={whatsappUrl} target="_blank" rel="noreferrer">
-                WhatsApp: {phoneNumber}
-              </a>
-              <span>{locationText}</span>
-            </div>
-          </div>
-
-          <nav className="footer-column footer-links" aria-label="Quick links">
-            <p className="footer-column-title">Quick Links</p>
-            {footerLinks.map((link) => (
-              <a key={link.href} href={link.href}>
-                {link.label}
-              </a>
-            ))}
-            {footerLegalLinks.map((item) => (
-              <a key={item.href} href={item.href}>
-                {item.label}
-              </a>
-            ))}
-          </nav>
-
-          <div className="footer-column footer-services">
-            <p className="footer-column-title">Services</p>
-            <p className="footer-services-text">{footerServicesSummary}</p>
+            <span className="footer-location">{locationText}</span>
+            <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
+            <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
             <div className="footer-socials" aria-label="Social links">
               {socialLinks.map((link) => (
                 <a key={link.href} href={link.href} target="_blank" rel="noreferrer">
@@ -66,9 +38,40 @@ export default function Footer() {
               ))}
             </div>
           </div>
+
+          <nav className="footer-column footer-links" aria-label="Quick links">
+            <p className="footer-column-title">Explore</p>
+            <ul className="footer-link-grid">
+              {footerLinks.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href}>{link.label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <div className="footer-column footer-services">
+            <p className="footer-column-title">Services</p>
+            <p className="footer-services-text">{footerServicesSummary}</p>
+          </div>
         </div>
+
         <div className="footer-legal" aria-label="Legal">
-          <span>{footerCopyright} · Established in 2019 · {locationText}</span>
+          <span>{footerCopyright}</span>
+          {footerLegalLinks.map((item) => (
+            <span key={item.href} className="footer-legal-item">
+              <span className="footer-legal-sep" aria-hidden="true">
+                ·
+              </span>
+              <a href={item.href}>{item.label}</a>
+            </span>
+          ))}
+          <span className="footer-legal-item">
+            <span className="footer-legal-sep" aria-hidden="true">
+              ·
+            </span>
+            <span>Developed by Basic IT</span>
+          </span>
         </div>
       </div>
     </footer>

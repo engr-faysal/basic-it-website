@@ -1,4 +1,5 @@
 import SectionTitle from '../components/SectionTitle'
+import ServiceIcon from '../components/ServiceIcon'
 import { services, servicesSection } from '../data/siteData'
 
 export default function Services() {
@@ -12,9 +13,7 @@ export default function Services() {
         <div className="cards">
           {services.map((s) => (
             <article key={s.title} className="card">
-              <span className="card-icon" aria-hidden="true">
-                {s.icon}
-              </span>
+              <ServiceIcon name={s.icon} />
               <h3>{s.title}</h3>
               <p>{s.description}</p>
             </article>

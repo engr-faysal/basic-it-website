@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://basicit.com.bd/sitemap.xml

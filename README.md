@@ -1,16 +1,37 @@
-# React + Vite
+# Basic IT Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Professional marketing site for [Basic IT](https://basicit.com.bd) — websites, e-commerce, education platforms, software systems, and digital business setup.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19 + Vite 8
+- Content in `src/data/siteData.js`
+- Section components in `src/sections/`
 
-## React Compiler
+## Commands
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev      # local dev server
+npm run build    # production build → dist/
+npm run preview  # preview production build
+```
 
-## Expanding the ESLint configuration
+## Deploy
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Run `npm run build`
+2. Upload `dist/` to your host (Vercel, Netlify, Cloudflare Pages, or cPanel)
+3. Point `basicit.com.bd` DNS to the host
+4. Ensure HTTPS is enabled
+
+## Customize
+
+- **Copy & contact:** `src/data/siteData.js`
+- **Logo:** replace `public/basic-it-logo.svg` (or add `basic-it-logo.jpeg` and update paths in `Navbar.jsx` / `Footer.jsx`)
+- **Legal pages:** `public/privacy-policy.html`, `public/terms-and-conditions.html`
+
+## Homepage sections
+
+Hero → Trust stats → Services → Work → Why Us → CTA → Contact
+
+Additional section components (About, Journey, Products, etc.) remain in the repo for future pages.

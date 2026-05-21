@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { brandName, navLinks } from '../data/siteData'
+import BrandLogo from './BrandLogo'
+import { brandName, navCta, navLinks } from '../data/siteData'
 
 export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false)
@@ -9,17 +10,26 @@ export default function Navbar() {
     <header className="navbar">
       <div className="container">
         <div className="navbar-inner">
-          <a href="#home" className="brand" onClick={closeNav}>
-            <img src="/basic-it-logo.jpeg" alt="" className="brand-logo" />
-            <span>{brandName}</span>
+          <a href="#home" className="brand" onClick={closeNav} aria-label={`${brandName} home`}>
+            <BrandLogo showName />
           </a>
-          <nav className="nav-desktop" aria-label="Main">
-            {navLinks.map((link) => (
-              <a key={link.href} href={link.href}>
-                {link.label}
-              </a>
-            ))}
-          </nav>
+          <div className="nav-actions">
+            <nav className="nav-desktop" aria-label="Main">
+              {navLinks.map((link) => (
+                <a key={link.href} href={link.href}>
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+            <a
+              className="btn btn-primary nav-cta"
+              href={navCta.href}
+              target={navCta.external ? '_blank' : undefined}
+              rel={navCta.external ? 'noreferrer' : undefined}
+            >
+              {navCta.label}
+            </a>
+          </div>
           <button
             type="button"
             className="nav-toggle"
@@ -41,6 +51,13 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <a
+            className="btn btn-primary nav-cta-mobile"
+            href={navCta.href}
+            onClick={closeNav}
+          >
+            {navCta.label}
+          </a>
         </nav>
       </div>
     </header>
