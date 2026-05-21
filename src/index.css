@@ -17,8 +17,8 @@
   --radius-lg: 18px;
   --sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
     sans-serif;
-  --max: 1080px;
-  --space-section: clamp(3.75rem, 9vw, 6.25rem);
+  --max: 1280px;
+  --space-section: clamp(4.5rem, 8vw, 7.25rem);
   --nav-h: 4.25rem;
 
   font-family: var(--sans);

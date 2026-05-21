@@ -23,6 +23,7 @@ export const navLinks = [
 export const footerLinks = [
   { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
+  { label: 'Work & Experience', href: '#worked-with' },
   { label: 'Products', href: '#products' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -41,7 +42,7 @@ export const footerLegalLinks = [
 ]
 
 export const hero = {
-  eyebrow: 'ESTABLISHED IN 2019 · LAUNCHED IN 2020 · TECHNOLOGY & DIGITAL BUSINESS SOLUTIONS',
+  eyebrow: 'ESTABLISHED 2019 · DHAKA, BANGLADESH · DIGITAL SOLUTIONS COMPANY',
   title: 'Build your digital presence with Basic IT',
   lead:
     'Websites, e-commerce, educational platforms, software systems, and digital business setup for businesses, educators, and service providers.',
@@ -51,12 +52,12 @@ export const hero = {
     { label: 'Chat on WhatsApp', href: whatsappUrl, variant: 'primary', external: true },
     { label: 'Explore Services', href: '#services', variant: 'secondary' },
   ],
-  panelTitle: 'DIGITAL PRESENCE FROM SCRATCH',
+  panelTitle: 'CORE CAPABILITIES',
   panelItems: [
-    'Facebook page and Google location support',
-    'Branding basics, content direction, and online visibility',
-    'Business websites, e-commerce, and education platforms',
-    'Software workflow planning and SaaS product direction',
+    'Digital presence setup from scratch',
+    'Website, e-commerce, and education platforms',
+    'Software workflow and SaaS product planning',
+    'Ongoing digital support and practical guidance',
   ],
 }
 
@@ -201,26 +202,26 @@ export const helpCards = [
 ]
 
 export const workedWithSection = {
-  title: 'Featured Work & Service Experience',
+  title: 'Featured Work & Practical Experience',
   description:
-    'Selected examples and work areas that show how Basic IT supports real business needs — websites, online presence, content structure, and product planning.',
+    'A focused view of the real work areas behind Basic IT: websites, online presence setup, business pages, educational platforms, and product planning.',
 }
 
 export const featuredWork = [
   {
     icon: '01',
     title: 'faysalimran.com',
-    label: 'Live website example',
+    label: 'Platform example',
     description:
-      'A working platform example for presenting services, courses, content, contact information, and online learning direction in one organized website.',
-    meta: 'Website structure · Course presentation · Contact flow',
-    scope: ['Website', 'Content', 'Education'],
+      'A live platform example showing organized service presentation, learning content direction, contact flow, and education-focused website structure.',
+    meta: 'Website structure · Content flow · Lead capture',
+    scope: ['Website', 'Education', 'Content'],
     href: 'https://www.faysalimran.com/',
   },
   {
     icon: '02',
     title: 'Business & E-commerce Websites',
-    label: 'Website project experience',
+    label: 'Business web experience',
     description:
       'Experience with business-ready website planning, product presentation, service pages, order-focused layouts, and online store direction.',
     meta: 'Product pages · Service pages · Conversion layout',
@@ -229,7 +230,7 @@ export const featuredWork = [
   {
     icon: '03',
     title: 'Digital Business Setup',
-    label: 'Online presence support',
+    label: 'Presence setup support',
     description:
       'Support for businesses starting from scratch: Facebook page setup, Google location/profile support, branding basics, content direction, and visibility planning.',
     meta: 'Facebook · Google profile · Branding basics',
@@ -253,19 +254,19 @@ export const workedWithItems = [
 export const supportedSection = {
   title: 'Businesses We Have Supported',
   description:
-    'Basic IT has supported 20+ local businesses, educators, and service providers with practical digital services including page setup, Google location support, website planning, branding basics, content direction, and visibility support.',
+    'Basic IT has supported 20+ businesses, educators, and service providers with practical digital services including page setup, Google location support, website planning, branding basics, content direction, and online visibility support.',
   note:
-    'Logo cards are ready for real customer logos or business names after assets and permission are confirmed. This section means businesses supported, not official partner claims.',
+    'This area is ready for real customer logos or business names after assets and permission are confirmed. These are businesses supported, not official partner claims.',
 }
 
 export const supportedPlaceholders = [
-  { name: 'Retail & Local Shops', type: 'Page, profile, and visibility support' },
+  { name: 'Retail Businesses', type: 'Page, profile, and visibility support' },
   { name: 'Education Services', type: 'Academic page and content direction' },
   { name: 'Coaching Centers', type: 'Digital presence and workflow support' },
   { name: 'Service Providers', type: 'Online profile and contact setup' },
   { name: 'Course Sellers', type: 'Educational website direction' },
   { name: 'Online Stores', type: 'E-commerce planning and layout' },
-  { name: 'Google Profiles', type: 'Location and business profile support' },
+  { name: 'Google Business Profiles', type: 'Location and profile support' },
   { name: 'Facebook Pages', type: 'Business page setup and boost direction' },
 ]
 
